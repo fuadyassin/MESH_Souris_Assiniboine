@@ -1,0 +1,37 @@
+{
+  "exec": {
+    "remap": "easymore cli"
+  },
+
+  "args": {
+    "remap": [{
+      "case-name": "remapped",
+      "cache": "/home/fuaday/scratch/sras-agg-model/easymore-outputs/cache/",
+      "shapefile": "/home/fuaday/github-repos/Souris_Assiniboine_MAF/1-geofabric/SrsAboine-geofabric/sras_subbasins_MAF_Agg.shp",
+      "shapefile-id": "COMID",
+      "source-nc": "/home/fuaday/scratch/sras-agg-model/datatool-outputs/**/*.nc*",
+      "variable-lon": "lon",
+      "variable-lat": "lat",
+      "variable": [
+        "RDRS_v2.1_P_P0_SFC",
+        "RDRS_v2.1_P_HU_09944",
+        "RDRS_v2.1_P_TT_09944",
+        "RDRS_v2.1_P_UVC_09944",
+        "RDRS_v2.1_A_PR0_SFC",
+        "RDRS_v2.1_P_FB_SFC",
+        "RDRS_v2.1_P_FI_SFC"
+      ],
+      "remapped-var-id": "COMID",
+      "remapped-dim-id": "COMID",
+      "output-dir": "/home/fuaday/scratch/sras-agg-model/easymore-outputs/",
+      "job-conf": "/home/fuaday/github-repos/Souris_Assiniboine_MAF/2-agnostic/easymore-job.slurm",
+      "_flags": [
+        "skip-checks",  
+        "submit-job"
+      ]
+    }]
+  },
+  "order": {
+    "remap": -1
+  }
+}

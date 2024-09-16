@@ -1,0 +1,69 @@
+{
+  "exec": {
+    "gis": "/home/fuaday/github-repos/gistool/extract-gis.sh"
+  },
+
+  "args": {
+    "gis": [{
+      "dataset": "depth_to_bedrock",
+      "dataset-dir": "/project/6008034/Climate_Forcing_Data/geospatial-data/DTB",
+      "variable": "BDTICM_M_250m_ll,BDRICM_M_250m_ll,BDRLOG_M_250m_ll",
+      "start-date": "",
+      "end-date": "",
+      "output-dir": "/home/fuaday/scratch/sras-agg-model/gistool-outputs",
+      "lat-lims": "",
+      "lon-lims": "",
+      "shape-file": "/home/fuaday/github-repos/Souris_Assiniboine_MAF/1-geofabric/SrsAboine-geofabric/sras_subbasins_MAF_Agg.shp",
+      "print-geotiff": "true",
+      "stat": [
+        "min",
+        "max",
+        "mean",
+        "median"  
+      ],
+      "quantile": "",
+      "prefix": "sras_model_",
+      "email": "fuad.yassin@usask.ca",
+      "account": "rpp-kshook",
+      "fid": "COMID",
+      "lib-path": "/project/rpp-kshook/Climate_Forcing_Data/assets/r-envs/",
+      "_flags": [
+        "submit-job",
+        "parsable"
+      ]
+    },
+
+    {
+      "dataset": "merit-hydro",
+      "dataset-dir": "/project/rpp-kshook/CompHydCore/merit_hydro/raw_data/",
+      "variable": "elv,upa,wth",
+      "start-date": "",
+      "end-date": "",
+      "output-dir": "/home/fuaday/scratch/sras-agg-model/gistool-outputs",
+      "lat-lims": "",
+      "lon-lims": "",
+      "shape-file": "/home/fuaday/github-repos/Souris_Assiniboine_MAF/1-geofabric/SrsAboine-geofabric/sras_subbasins_MAF_Agg.shp",
+      "print-geotiff": "true",
+      "stat": [
+        "min",
+        "max",
+        "mean",
+        "median"
+      ],
+      "quantile": "",
+      "prefix": "sras_model_",
+      "email": "fuad.yassin@usask.ca",
+      "account": "rpp-kshook",
+      "fid": "COMID",
+      "lib-path": "/project/rpp-kshook/Climate_Forcing_Data/assets/r-envs/",
+      "_flags": [
+        "submit-job",
+        "parsable"
+      ]
+    }]
+
+  },
+  "order": {
+    "gis": -1
+  }
+}
